@@ -9,15 +9,28 @@
 
 // Step 3: Hence, If the total number of factors is more than two, it is not a prime number but a composite number. Because When a number is divisible by only one and itself, then it is a prime number.
 
-//Answer:
+//Answer = 1:
 
-// $my_array = [12, 34, 2, 6, 78, 9, 3, 7, 9, 4];
+    $my_array = [12, 2, 34, 7, 6, 78];
+    foreach ($my_array as $key => $value) {
+        $my_array = $value;
+        $nutrals = 0;
 
-//     foreach ($my_array as $key => $number) {
-      
-//     }
+        for ($i=2; $i < $my_array  ; $i++) { 
+            if ($my_array % $i == 0) {
+                $nutrals++;
+                break;
+            }
+        }
+        if ($nutrals == 0) {
+            echo $my_array."is prime Number";
+         }
+         else{
+             continue;
+         }
 
-
+    }
+    
 
 // Question 02: 
 
@@ -85,15 +98,13 @@ echo "<br> <br> answer = 4 <br> <br>" ;
 
 $array_break_continue =array(0,10,80,67,60,89,91,56,45,30,95,83,99);
 
-$arrlength = count($array_break_continue);
-
-for($x = 0; $x < $arrlength; $x++) {
-    if ($array_break_continue[$x] ==  2* $array_break_continue[$x] -1 ) {
+foreach ($array_break_continue  as $key => $value) {
+    if ($key % 2 !==0)  {
         continue;
     }
-    else
-    { echo $array_break_continue[$x]; }
-
+    echo $value;
+    echo "<br>";
 }
+
 
 
