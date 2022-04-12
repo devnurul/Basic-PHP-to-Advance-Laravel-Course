@@ -11,6 +11,8 @@
 
 //Answer = 1:
 
+// this array is indexed array.
+
     $my_array = [12, 2, 34, 7, 6, 78];
     foreach ($my_array as $key => $value) {
         $my_array = $value;
