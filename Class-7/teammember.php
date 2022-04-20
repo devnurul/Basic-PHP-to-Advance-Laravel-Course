@@ -80,6 +80,7 @@ a:hover{
 
 .team-member figure img {
   min-width: 100%;
+  height: 380px;
 }
 
 .team-member figcaption p {
@@ -204,17 +205,17 @@ a:hover{
       <div class="container">
         <div class="row">
 
-          <div class="col-md-4">
-            <div class="team-member">
-
-            <?php
+        <?php
                 foreach ($Teammember as $key => $single_member) {
                    
                 
                        
-            ?>
+            ?>     
 
-              <figure>
+          <div class="col-md-4">
+            <div class="team-member">
+
+               <figure>
                 <img src="<?php echo $single_member['image'] ?>" alt="" class="img-responsive">
                 <figcaption>
                   <p><?php echo $single_member['about'] ?></p>
@@ -234,18 +235,23 @@ a:hover{
               <h4><?php echo $single_member['name'] ?></h4>
               <p><?php echo $single_member['job_title'] ?></p>
 
-              <?php
-               }
-              ?>
+              
             </div><!-- /.team-member-->
 
 
         </div><!-- /.row -->
+
+        <?php
+               }
+              ?>
+
       </div><!-- /.container -->
 
     </div><!-- /.row -->
   </div><!-- /.container -->
 </section><!-- /.our-team -->
+
+
 
 </body>
 </html>
