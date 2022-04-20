@@ -186,7 +186,7 @@ a:hover{
         ],
 
         ['name' => "Ayman Noor", 'job_title' => 'Wordpress developer', 'about' => 'I am a profession wordpress developer and also a teacher. I love to make new thing by codding', 'image' =>'image/image-3.png', 'social_link'  => [
-            'https://www.linkedin.com/in/developernurulislam/', 'https://twitter.com/nurul_islam0', 'https://www.linkedin.com/in/developernurulislam/'
+            'https://www.linkedin.com/in/developer/', 'https://twitter.com/islam0', 'https://www.linkedin.com/in'
             ]
         ],
         
@@ -222,13 +222,14 @@ a:hover{
                   <ul>
                       <?php
                       $link_social =  $single_member['social_link'];
-
+                           
+                        
                         ?>
                       
-                    <li><a href=" <?php $link_social[0]; ?> "><i class="fa fa-facebook fa-2x"></i></a></li>
-                    <li><a href=" <?php $link_social[1]; ?> "><i class="fa fa-twitter fa-2x"></i></a></li>
-                    <li><a href= "<?php $link_social[2]; ?> "><i class="fa fa-linkedin fa-2x"></i></a></li>
-                   
+                    <li><a href=" <?php echo $link_social[0] ; ?> "><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href=" <?php echo $link_social[1] ; ?> "><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href= "<?php echo $link_social[2] ; ?> "><i class="fa fa-linkedin fa-2x"></i></a></li>
+                 
                   </ul>
                 </figcaption>
               </figure>

@@ -150,7 +150,25 @@ $questionSets       =  [
     [
         'question' => 'What is Html?',
         'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
+        'programmming language', 'markup language', 'css', 'None of theme'
+        ]
+    ],
+    [
+        'question' => 'What is your name?',
+        'options'  => [
+        'Shakiukl', 'Monir', 'Josim', 'Pintu'
+        ]
+    ],
+    [
+        'question' => 'What is your fathere name?',
+        'options'  => [
+            'Shakiukl', 'Monir', 'Josim', 'Pintu'
+        ]
+    ],
+    [
+        'question' => 'What is Mother name?',
+        'options'  => [
+            'Shakiukl', 'Monir', 'Josim', 'Pintu'
         ]
     ],
     [
@@ -160,9 +178,9 @@ $questionSets       =  [
         ]
     ],
     [
-        'question' => 'What is loream feather?',
+        'question' => 'What is your name?',
         'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
+        'Shakiukl', 'Monir', 'Josim', 'Pintu'
         ]
     ],
     [
@@ -172,27 +190,9 @@ $questionSets       =  [
         ]
     ],
     [
-        'question' => 'What is loream feather?',
+        'question' => 'What is your name?',
         'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
-        ]
-    ],
-    [
-        'question' => 'What is loream feather?',
-        'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
-        ]
-    ],
-    [
-        'question' => 'What is loream feather?',
-        'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
-        ]
-    ],
-    [
-        'question' => 'What is loream feather?',
-        'options'  => [
-        'ans1', 'ans2', 'ans3', 'ans4'
+        'Shakiukl', 'Monir', 'Josim', 'Pintu'
         ]
     ],
 ];
