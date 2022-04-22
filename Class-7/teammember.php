@@ -207,9 +207,7 @@ a:hover{
 
         <?php
                 foreach ($Teammember as $key => $single_member) {
-                   
-                
-                       
+   
             ?>     
 
           <div class="col-md-4">
@@ -222,8 +220,7 @@ a:hover{
                   <ul>
                       <?php
                       $link_social =  $single_member['social_link'];
-                           
-                        
+                   
                         ?>
                       
                     <li><a href=" <?php echo $link_social[0] ; ?> "><i class="fa fa-facebook fa-2x"></i></a></li>
@@ -235,8 +232,7 @@ a:hover{
               </figure>
               <h4><?php echo $single_member['name'] ?></h4>
               <p><?php echo $single_member['job_title'] ?></p>
-
-              
+   
             </div><!-- /.team-member-->
 
 
@@ -251,8 +247,6 @@ a:hover{
     </div><!-- /.row -->
   </div><!-- /.container -->
 </section><!-- /.our-team -->
-
-
 
 </body>
 </html>
