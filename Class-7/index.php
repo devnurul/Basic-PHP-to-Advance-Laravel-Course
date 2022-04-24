@@ -1,61 +1,35 @@
 <!-- 
 Question 01:
-
 		Let’s make an exam question set (add at list 10 dummy question) like that
-
 	$questionSet = [
-
     [
-
         'question' => 'What is loream ipsum?',
-
         'options' => [
-
             'ans1', 'ans2', 'ans3', 'ans4'
-
         ]
-
     ],
-
-
-
     [
-
         'question' => 'What is loream ipsum?',
-
         'options' => [
-
             'ans1', 'ans2', 'ans3', 'ans4'
-
         ]
-
     ],
-
-
-
     [
-
         'question' => 'What is loream ipsum?',
-
         'options' => [
-
             'ans1', 'ans2', 'ans3', 'ans4'
-
         ]
-
     ]
 ];
-
 Make a simple exam design using html css
-
 Then make a exam by using these questions
-
 Your questions must be come randomize order
-
-
  -->
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c6f2f71ebbf6c5b4ae0cb56107bc037355c6b90
 <!DOCTYPE html>
 <html lang="en">
 <head>
