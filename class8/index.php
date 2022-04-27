@@ -21,31 +21,27 @@ function finding_age_label($age){
  finding_age_label(100);
 
 
-// Create a function that will return the area of a rectangle, square, triangle
 
-// function shape_calculator($dimantion){
-//         foreach ($dimantion as $value) {
-//         }
-//         $number_of_dimantion = count($dimantion);
-//     if ( $number_of_dimantion < 3 ||   $number_of_dimantion > 4) {
-//             return "This Dimantion is not valid <br> Please provide 3 or 4 dimantional value";
-//     }
-//     elseif ( $number_of_dimantion == 3) {
-//         return "This is Tryangle";
-//     }else{
+//Create a function that will return the area of a rectangle, square, triangle
 
-//             if ($value[0] == $value[2] && $value[1] == $value[3] ) {
-//                 return "this is rectangle";
-//             }
-//             else{
-//                 return "data not valid";
-//             }
-    
-//     }
-// };
+function araOfrectangle($leanth, $wide){
+    $area = $leanth * $wide ;
+    return $area;
+};
+//echo araOfrectangle(23, 1);
 
+function araOfsquare($leanth){
+  $area1 = $leanth * $leanth ;
+  return $area1;
+};
+//echo araOfrectangle(23);
 
-echo shape_calculator([2, 3, 2, 3]);
+function araOftryangle($land, $height){
+  $area2 = ($land * $height) / 2;
+  return $area2;
+};
+//echo araOfrectangle(23, 1);
+
 
 
 
@@ -58,10 +54,8 @@ echo shape_calculator([2, 3, 2, 3]);
            $gpa_n = $total_number / $total_subject ;
            $gpa_n = round($gpa_n);
            
-           foreach ($number_input as$value) {
-           
-           }
-          if ($value < 33) {
+      
+          if ($gpa_n < 33) {
             return " You are Faild";
           }else{
             
@@ -92,25 +86,22 @@ echo shape_calculator([2, 3, 2, 3]);
 
 
 
-// Create an age calculator function
+//Create an age calculator function
 
-//     function agecal($birthDate){
   
-//       $currentDate = date("d-m-Y");
-      
-//       $age = date_diff(date_create($birthDate), date_create($currentDate));
-      
-//      echo "Current age is ".$age->format("%y");
+function age_calculator($from_start,$from_end){ 
+  $birthdate = new DateTime(date("Y-m-d",  strtotime(implode('-', array_reverse(explode('/', $from_start))))));
+  $today= new DateTime(date("Y-m-d",  strtotime(implode('-', array_reverse(explode('/', $from_end))))));           
+  $ages = $birthdate->diff($today)->y;
 
-// }
+  return $ages;
+}
 
-
-// agecal(25-11-1994);
-
+echo age_calculator('06/06/1996','07/02/2011');
 
 
 
-// Create a BMI function for health
+//Create a BMI function for health
 
 function bmi($wight, $height){
       $height = $height/100;
@@ -150,3 +141,4 @@ function currency_convarter($taka, $currency){
         }
 }
 echo currency_convarter(5962, "pound");
+
