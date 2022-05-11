@@ -54,6 +54,10 @@ function araOftryangle($land, $height){
            $gpa_n = $total_number / $total_subject ;
            $gpa_n = round($gpa_n);
            
+           foreach ($number_input as $key => $value) {
+             if ($value <= 32) {
+                 ;
+             }
       
           if ($gpa_n < 33) {
             return " You are Faild";
@@ -97,7 +101,7 @@ function age_calculator($from_start,$from_end){
   return $ages;
 }
 
-echo age_calculator('06/06/1996','07/02/2011');
+//echo age_calculator('06/06/1996','07/02/2011');
 
 
 
