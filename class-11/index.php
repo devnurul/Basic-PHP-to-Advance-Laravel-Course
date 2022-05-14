@@ -90,6 +90,19 @@
         }
       };
 
+/**
+ * age calculator 
+ *  
+ * 
+ */
+      // function getAge($birthday){
+      //     $age = date('y') - date
+      // };
+
+      
+      
+     
+
 
 
 
@@ -99,7 +112,18 @@
     $email    = $_POST["email"];
     $password = $_POST["password"];
     $username = $_POST["username"];
-    $birthdas = $_POST["birthdas"];
+
+    $birthday = $_POST["date"];
+
+    $Inputage = new DateTime($birthday);
+
+    $today = new DateTime(date('m.d.y')) ;
+    
+    $ageDiff = $today->diff($Inputage);
+    
+    $age = ($ageDiff->y );
+    
+   
     if(isset($_POST["gander"])){
       $gander = $_POST["gander"];
     }
@@ -112,7 +136,7 @@
     
 
      
-    if (empty($fname) || empty($lname)|| empty($email) || empty($password) || empty($age) || empty($username)) {
+    if (empty($fname) || empty($lname)|| empty($email) || empty($password) || empty($birthday) || empty($username)) {
       $validationMessage = valided("All Field Are Requierd.", "red");
 
     }elseif(userNameChecker($username) == false){
@@ -125,18 +149,19 @@
     }elseif(eduMailCheck($email) == false){
       $validationMessage = valided("Your Email is not edumail.", "#f5a42b");
     }
+    
     elseif($age <= 18){
       $validationMessage = valided("Your age is under 18.", "#f5a42b");
     }
+    
         
     else {
       $validationMessage = valided("You are done it nicely.", "#14cb6582");
       $_POST = "";
       
     }
+   
   }
-
-
 
   ?>
 
