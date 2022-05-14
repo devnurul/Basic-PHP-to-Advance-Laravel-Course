@@ -7,6 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  
+  <script>  
+         $(function() {  
+            $( ".datepicker" ).datepicker();  
+         });  
+ </script> 
+
   <style>
 
 .form_wrapper input[type="date"] {
@@ -56,13 +63,12 @@
         }
       };
       
-
-      /**
+           /**
        * eduMailCheck for edu mail chcek
        * 
        */
       function eduMailCheck($mail){
-        $eduMail = ['nu.edu.bd', 'du.edu.bd', 'nsu.edu.bd'];
+        $eduMail = ['nu.edu.bd', 'du.edu.bd', 'nsu.edu.bd', 'gmail.com'];
           $mail_arr = explode("@", $mail, 2);
           if (in_array($mail_arr[1], $eduMail )) {
             return true;
@@ -204,13 +210,12 @@
               </div>
             </div>
 
-            <!-- <div class="input_field"> <span><i class="fa-solid fa-stopwatch-20"></i></span>
-              <input type="text" name="age" placeholder="Your age"value="<?php //olddata('age'); ?>" />
-            </div> -->
-
-            <div class="input_field"> <span><i class="fa-solid fa-stopwatch-20"></i></span>
-              <input type="date" name="date"  value="<?php olddata('date'); ?>" />
+            <div class="input_field datepicker"> <span><i class=" fa-solid fa-stopwatch-20"></i></span>
+              <input type="date" name="age" value="<?php olddata('age'); ?>" />
             </div>
+  
+
+            
            
             <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
               <input type="password" name="password" placeholder="Password" value="<?php olddata('password'); ?>" />
@@ -252,9 +257,13 @@
   <p class="credit">Developed by <a href="https://github.com/devnurul/Basic-PHP-to-Advance-Laravel-Course/tree/main/class-10" target="_blank">Nurul Islam</a></p>
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    
+  </script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
