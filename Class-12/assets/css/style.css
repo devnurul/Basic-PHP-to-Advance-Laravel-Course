@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #e03a3c;
+  color: #3c2afd;
   text-decoration: none;
 }
 
 a:hover {
-  color: #e76668;
+  color: #4e4bfa;
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #e03a3c;
+  background: #3c2afd;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #e65d5f;
+  background: #4e4bfa;
   color: #fff;
 }
 .back-to-top.active {
