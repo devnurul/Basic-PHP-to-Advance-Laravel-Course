@@ -1,92 +1,49 @@
- * 	Question 01: 
- *  Practice class 13
- * Create a Database name  user_information.
- *1. In Users table 7 column:  id  , username , age , phone, address, created_at, updated_at
- *2. In Products table 7 column: id, post_title , post_details, post_file, created_at, updated_at, deleted_at
- *3. In comments table 3 column:  id, post_id, comment, created_at, updated_at, deleted_at
- 
- 1. make a single & multiple insert query for every table.
- 2. Make a update query and also make a delete query for every table
 
- * Note: Now create a text file and write all sql query there and submit github repo link */
+ Answer.1. CREATE A DATABASE  done
+CREATE A DATABASE "user_information"
+CREATE DATABASE user_information;
 
 
-=======================No.1 Start=========================
+   Answer.2. CREATE A TABLE  done
+CREATE A TABLE "user_info" 5 column:  id  , username , age , phone, address, salary , country  ,created_at, updated_at
 
-  1.Create users_table and make Singular & multiple insert Query and also make update query and also make query for users_table
+CREATE TABLE user_info (
 
-                CREATE TABLE users_table(
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    username    VARCHAR(20) NOT NULL,
+    age         INT NOT NULL, 
+    phone       VARCHAR(13) NOT NULL,
+    address     VARCHAR(55) NOT NULL,
+    salary      INT NOT NULL,
+    country     VARCHAR(20) NOT NULL,
+    created_at  CURRENT_TIMESTAMP ,
+    updated_at  DATETIME
 
-                    id INTEGER PRIMARY KEY,
-                    username VARCHAR(20),
-                    age INTEGER,
-                    phone VARCHAR(13),
-                    address VARCHAR(60),
-                    created_at TIMESTAMP,
-                    updated_at DATETIME NOT NULL
-
-                )
-
-   Singular: INSERT INTO users_table(username, phone, address, updated_at)
-             VALUES('devsrsihab', '+8801609033090', 'dhaka,bangldesh','2022-5-24 6:14:45')
-
-   Multiple: INSERT INTO users_table(username, phone, address, updated_at)
-             VALUES('mohanlal', '+8801609033090', 'gazipur,bangladesh', '2022-5-24 6:14:45'),
-                   ('asikisla', '+8801609033091', 'chandra,bangladesh', '2022-5-24 6:16:11'),
-                   ('alaminta', '+8801609033092', 'fulkoli,bangladesh', '2022-5-24 6:18:17'),
-                   ('sumaiyaf', '+8801609033093', 'ajompur,bangladesh', '2022-5-24 6:20:55'),
-                   ('dekshasa', '+8801609033094', 'biyarap,bangladesh', '2022-5-24 6:22:32'),
-                   ('manikcha', '+8801609033095', 'nildigh,bangladesh', '2022-5-24 6:24:57')
-
-   Update: UPDATE users_table SET name="sohan khan", phone="01720196645" WHERE id=2;
-   Delete: DELETE users_table  WHERE id=3; ===========No.1 end===========
+                     )
 
 
-=======================No.2 start=========================
-  2.Create products_table and make Singular & multiple insert Query and also make update query and make delete query for users_table
-
-            CREATE TABLE products_table (
-
-                id INTEGER PRIMARY KEY,
-                post_title VARCHAR(55),
-                post_details TEXT(),
-                post_file VARCHAR(55),
-                created_at TIMESTAMP,
-                updated_at DATETIME NOT NULL,
-                deleted_at DATETIME NOT NULL
-
-            )
-   Singular: INSERT INTO products_table(post_title, post_details, post_file, updated_at, deleted_at)
-             VALUES('how to learn php ?', 'in this case if you want to learn php then you need to learn at first the basice in php. If you have clear the basice knowledge in php then you will learn it', 'photo.jpg','2022-5-22 6:14:45', '2022-5-24 6:14:45')
-
-   Multiple: INSERT INTO products_table(post_title, post_details, post_file, updated_at, deleted_at)
-             VALUES('how to learn php ?', 'in this case if you want to learn php then you need to learn at first the basice in php. If you have clear the basice knowledge in php then you will learn it', 'photo.jpg','2022-5-22 6:14:45', '2022-5-24 6:14:45'),
-
-             ('how to learn js ?', 'in this case if you want to learn js then you need to learn at first the basice in js. If you have clear the basice knowledge in js then you will learn it', 'photo.jpg','2022-5-20 6:14:45', '2022-5-23 6:14:45'),
-
-             ('how to learn MySQL ?', 'in this case if you want to learn MySQL then you need to learn at first the basice in MySQL. If you have clear the basice knowledge in MySQL then you will learn it', 'photo.jpg','2022-5-18 6:14:45', '2022-5-19 6:14:45'),
-
-   Update: UPDATE products_table SET post_title="how to learn css?", post_file="doc.xlsx" WHERE id=2;
-   Delete: DELETE products_table  WHERE id=2; ===========No.2 end===========
+   Answer.3.Find users who live in same country   
+SELECT * FROM `user_info` WHERE country = 'bangladesh'
 
 
-   =======================No.3 start=========================
-    *3. In comments table 3 column:  id, post_id, comment, created_at, updated_at, deleted_at
+   Answer.4.Show data  by high to low salary  
+ SELECT * FROM `user_info` ORDER BY salary DESC
 
-    CREATE TABLE comment (
-      id INT AUTO_INCREMENT PRIMARY KEY,
-      post_id INT,
-      comment varchar(355),
-      created_at TIMESTAMP,
-      update_at DATETIME NOT NULL,
-      deleted_at DATETIME NOT NULL
-    )
 
-   Singular: INSERT INTO comment (post_id, comment, updated_at, deleted_at) 
-   VALUES ('213', 'very good post', '2022-04-23, '2022-04-23')
+   Answer.5.Show data who get the highest salary  
+ SELECT MAX(salary) FROM `user_info` 
 
-   Multiple: INSERT INTO comment (post_id, comment, updated_at, deleted_at) 
-   VALUES ('213', 'very good post', '2022-04-23, '2022-05-23'),
-   VALUES ('218', 'very informative', '2022-04-23, '2022-05-23'),
-   VALUES ('219', 'a good one', '2022-04-23, '2022-05-23'),
-   VALUES ('220', 'good', '2022-04-23, '2022-05-23')   ===========No.3 end===========
+
+   Answer.6.Show data who get the lowest salary  
+ SELECT MIN(salary) FROM `user_info` 
+
+
+   Answer.7.Show how many table you have   
+SELECT  COUNT(id) FROM `user_info`
+
+
+ Answer.8.Show me how many users get a salary range of ( 5000 -15000)
+SELECT * FROM `user_info` WHERE salary BETWEEN 5000 AND 15000
+
+
+  
