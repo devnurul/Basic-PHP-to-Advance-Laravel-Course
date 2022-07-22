@@ -21,7 +21,7 @@ Question 01:
         ]
     ]
 ];
-Make a simple exam design using html css
+Make simple exam design using html css
 Then make a exam by using these questions
 Your questions must be come randomize order
  -->
